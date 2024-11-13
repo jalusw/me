@@ -1,7 +1,15 @@
 ---
-import Main from "../layouts/Main.astro";
+import Main from "@/layouts/Main.astro";
+import { Button } from "@/components/ui/button";
+
 ---
 
 <Main title="Hello">
-  <h1>Hello World</h1>
+  <div class="container mx-auto max-w-4xl">
+    <header class="text-center py-20">
+      <h1 class="font-bold text-8xl">Hello World</h1>
+      <p class="leading-loose mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet vel accusamus recusandae officiis porro enim doloribus quasi impedit ducimus, ipsa suscipit repudiandae vero obcaecati.</p>
+      <Button className="mt-8">Still On Progress</Button>
+    </header>
+  </div>
 </Main>
