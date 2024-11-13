@@ -1,15 +1,42 @@
 ---
 import Main from "@/layouts/Main.astro";
 import { Button } from "@/components/ui/button";
-
+import Navbar from "@/components/navigation/navbar";
+import {
+  InstagramIcon,
+  GithubIcon,
+  TwitterIcon,
+  LinkedinIcon,
+} from "lucide-react";
 ---
 
-<Main title="Hello">
-  <div class="container mx-auto max-w-4xl">
-    <header class="text-center py-20">
-      <h1 class="font-bold text-8xl">Hello World</h1>
-      <p class="leading-loose mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet vel accusamus recusandae officiis porro enim doloribus quasi impedit ducimus, ipsa suscipit repudiandae vero obcaecati.</p>
-      <Button className="mt-8">Still On Progress</Button>
-    </header>
-  </div>
+<Main title="Jalu Satriani Wijaya">
+  <Navbar />
+  <header class="py-36">
+    <div class="container mx-auto">
+      <div class="prose">
+        <h1 class="text-6xl">Jalu Satriani Wijaya</h1>
+        <p class="mt-0 leading-loose">
+          A software engineer committed to providing thoughtful solutions
+          through software, focused on creating tools that genuinely help
+          others.
+        </p>
+      </div>
+      <Button size="lg" className="mt-8 rounded-none">Explore More</Button>
+      <div class="mt-20 flex space-x-6">
+        <a href="https://instagram.com/jalusw" target="_blank">
+          <InstagramIcon />
+        </a>
+        <a href="https://github.com/jalusw" target="_blank">
+          <GithubIcon />
+        </a>
+        <a href="https://x.com/jalusw" target="_blank">
+          <TwitterIcon />
+        </a>
+        <a href="https://linkedin.com/in/jalusw" target="_blank">
+          <LinkedinIcon />
+        </a>
+      </div>
+    </div>
+  </header>
 </Main>
