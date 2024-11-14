@@ -9,13 +9,9 @@ import {
   TwitterIcon,
   LinkedinIcon,
   MapPinIcon,
+  FileUserIcon,
 } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 ---
 
 <Main title="Jalu Satriani Wijaya">
@@ -30,7 +26,15 @@ import {
           others.
         </p>
       </div>
-      <Button size="lg" className="mt-8 rounded-none">Explore More</Button>
+      <div class="mt-8 flex items-center space-x-4">
+        <Button size="lg">Explore More</Button>
+        <a href="jalusatrianiwijaya.pdf" download target="_blank">
+          <Button size="lg" variant="outline">
+            <FileUserIcon />
+            My Resume
+          </Button>
+        </a>
+      </div>
       <div class="mt-20 flex justify-end space-x-6">
         <a
           href="https://instagram.com/jalusw"
