@@ -2,12 +2,20 @@
 import Main from "@/layouts/Main.astro";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/navigation/navbar";
+import Footer from "@/components/navigation/footer";
 import {
   InstagramIcon,
   GithubIcon,
   TwitterIcon,
   LinkedinIcon,
+  MapPinIcon,
 } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 ---
 
 <Main title="Jalu Satriani Wijaya">
@@ -23,20 +31,90 @@ import {
         </p>
       </div>
       <Button size="lg" className="mt-8 rounded-none">Explore More</Button>
-      <div class="mt-20 flex space-x-6">
-        <a href="https://instagram.com/jalusw" target="_blank">
+      <div class="mt-20 flex justify-end space-x-6">
+        <a
+          href="https://instagram.com/jalusw"
+          target="_blank"
+          title="instagram"
+        >
           <InstagramIcon />
         </a>
-        <a href="https://github.com/jalusw" target="_blank">
+        <a href="https://github.com/jalusw" target="_blank" title="github">
           <GithubIcon />
         </a>
-        <a href="https://x.com/jalusw" target="_blank">
+        <a href="https://x.com/jalusw" target="_blank" title="twitter">
           <TwitterIcon />
         </a>
-        <a href="https://linkedin.com/in/jalusw" target="_blank">
+        <a
+          href="https://linkedin.com/in/jalusw"
+          target="_blank"
+          title="linkedin"
+        >
           <LinkedinIcon />
         </a>
       </div>
     </div>
   </header>
+  <main id="main">
+    <section class="py-20">
+      <div class="container">
+        <div class="prose">
+          <h2 class="text-4xl">Who Am I ?</h2>
+          <p>
+            I’m a software engineer who thrives on curiosity and challenge.
+            Based in Kalimantan Selatan, Indonesia, I’m constantly evolving
+            alongside the tech landscape, driven by a desire to bring
+            meaningful, high-quality digital experiences to life. From frontend
+            to backend, I’m here to make tech that lasts.
+          </p>
+          <p class="flex items-center gap-x-2">
+            <span>
+              <MapPinIcon />
+            </span>
+            Kalimantan Selatan, Indonesia
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="py-20">
+      <div class="container">
+        <h2 class="text-4xl font-bold">What Can I Do For You</h2>
+        <div class="flex flex-col gap-x-8 lg:flex-row">
+          <Card className="mt-8 rounded-sm shadow-none">
+            <CardHeader>
+              <CardTitle>Full Stack Web Development</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>
+                From designing smooth, responsive user interfaces to building
+                powerful backend systems, I provide end-to-end development
+                services for web applications. Let’s create scalable and
+                high-performance applications tailored to your users.
+              </p>
+              <div class="flex justify-end">
+                <Button className="mt-8">Contact</Button>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="mt-8 rounded-sm shadow-none">
+            <CardHeader>
+              <CardTitle>Multi Platform App Development</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>
+                From designing smooth, responsive user interfaces to building
+                powerful backend systems, I provide end-to-end development
+                services for web applications. Let’s create scalable and
+                high-performance applications tailored to your users.
+              </p>
+              <div class="flex justify-end">
+                <Button className="mt-8">Contact</Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
 </Main>
