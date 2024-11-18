@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import Main from "@/layouts/Main.astro";
+import Navbar from "@/components/navigation/navbar";
+import {
+  Card,
+  CardTitle,
+  CardContent,
+  CardHeader,
+} from "@/components/ui/card";
+
+const blogPosts = await getCollection("blog");
+---
+
+<Main title="Blogs">
+  <Navbar />
+  <div class="container">
+    <section class="mt-8">
+      {
+        blogPosts.map((blog) => (
+          <Card className="rounded-none shadow-none">
+            <CardHeader>
+              <CardTitle>
+                <a class="text-2xl" href={`/blog/${blog.slug}`}>
+                  {blog.data.title}
+                </a>
+              </CardTitle>
+              <time datetime={blog.data.date.toISOString()}>
+                {blog.data.date.toDateString()}
+              </time>
+            </CardHeader>
+            <CardContent>
+              <p>{blog.data.description}</p>
+            </CardContent>
+          </Card>
+        ))
+      }
+    </section>
+  </div>
+</Main>
