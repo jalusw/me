@@ -1,47 +1,47 @@
+import { useState } from "react";
 import { Button } from "../ui/button";
 import {
   LanguagesIcon,
-  MenuIcon,
   MoonIcon,
-  XIcon,
+  MenuIcon,
+  XIcon
 } from "lucide-react";
 
 export default function Navbar() {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleShowMenu = () => setShowMenu(!showMenu);
+
   return (
-    <nav className="sticky top-0 py-4 backdrop-blur-2xl">
-      <div className="container">
-        <div className="flex items-center justify-between">
-          <div className="flex flex-1 items-center">
-            <a className="text-2xl font-bold" href="/">
-              jalusw
-            </a>
-            <ul className="absolute bottom-0 left-0 right-0 top-0 flex hidden h-[100vh] flex-col items-center justify-center space-y-16 lg:bg-none lg:static lg:flex lg:flex-row lg:items-baseline lg:space-x-8 lg:space-y-0 lg:h-auto">
-              <li className="absolute right-0 top-0 mr-8 mt-8 lg:hidden">
-                <Button variant="ghost" title="close navbar">
-                  <XIcon />
-                </Button>
-              </li>
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/blog">Blog</a>
-              </li>
-            </ul>
-          </div>
-          <Button variant="ghost" className="block lg:hidden" title="open navbar">
+    <nav>
+      <div className="container flex justify-between items-center py-6">
+        <a className="text-2xl font-bold" href="/">JALU</a>
+        <div className={`fixed top-0 right-0 bottom-0 bg-white lg:static lg:bg-transparent lg:min-h-0 flex flex-col w-full p-4 min-h-screen lg:p-0 lg:flex-row transition-all ${showMenu ? "left-0"  : "left-[-100%]"}`}>
+          <Button className="self-end lg:hidden" variant="ghost" onClick={toggleShowMenu}>
+            <XIcon/>
+          </Button>
+          <ul className="flex flex-col gap-y-8 self-center items-center justify-center w-full lg:mt-0 mt-8 lg:flex-row lg:gap-y-0 lg:gap-x-8">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/blog">Blog</a>
+            </li>
+            <li>
+              <a href="/works">Works</a>
+            </li>
+          </ul>
+        </div>
+        <div className="flex space-x-4">
+          <Button className="lg:hidden" variant="ghost" onClick={toggleShowMenu}>
             <MenuIcon />
           </Button>
-          <div className="hidden lg:flex lg:space-x-2">
-            <Button variant="ghost">
-              <MoonIcon />
-            </Button>
-            <Button variant="ghost">
-              <LanguagesIcon />
-            </Button>
-            <Button variant="ghost">
-            </Button>
-          </div>
+          <Button className="hidden lg:block" variant="outline" >
+            <LanguagesIcon />
+          </Button>
+          <Button className="hidden lg:block" variant="outline">
+            <MoonIcon />
+          </Button>
         </div>
       </div>
     </nav>

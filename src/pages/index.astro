@@ -1,39 +1,30 @@
 ---
 import Main from "@/layouts/Main.astro";
+import Footer from "@/components/navigation/footer";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/navigation/navbar";
-import Footer from "@/components/navigation/footer";
 import {
   InstagramIcon,
-  GithubIcon,
   TwitterIcon,
+  GithubIcon,
   LinkedinIcon,
-  MapPinIcon,
-  FileUserIcon,
 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 ---
 
 <Main title="Jalu Satriani Wijaya">
-  <Navbar />
-  <header class="py-36">
+  <Navbar client:load/>
+  <header class="py-32">
     <div class="container mx-auto">
       <div class="prose">
-        <h1 class="text-6xl">Jalu Satriani Wijaya</h1>
-        <p class="mt-0 leading-loose">
-          A software engineer committed to providing thoughtful solutions
-          through software, focused on creating tools that genuinely help
-          others.
+        <h1 class="text-uppercase mb-0 text-6xl">JALU SATRIANI WIJAYA</h1>
+        <p class="mt-4 text-2xl">Software Engineer</p>
+        <p class="mt-4 leading-loose">
+          Jalu is an Indonesian software engineer, proficient in Full Stack Web
+          Development, with over two years of experience in building full-stack
+          web and multi-platform applications. He is passionate about building
+          software solutions that genuinely help others.
         </p>
-      </div>
-      <div class="mt-8 flex items-center space-x-4">
-        <Button size="lg">Explore More</Button>
-        <a href="jalusatrianiwijaya.pdf" download target="_blank">
-          <Button size="lg" variant="outline">
-            <FileUserIcon />
-            My Resume
-          </Button>
-        </a>
+        <Button size="lg">Reach Me</Button>
       </div>
       <div class="mt-20 flex justify-end space-x-6">
         <a
@@ -59,27 +50,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
       </div>
     </div>
   </header>
-  <main id="main">
-    <section class="py-20">
-      <div class="container">
-        <div class="prose">
-          <h2 class="text-4xl">Who Am I ?</h2>
-          <p>
-            I’m a software engineer who thrives on curiosity and challenge.
-            Based in Kalimantan Selatan, Indonesia, I’m constantly evolving
-            alongside the tech landscape, driven by a desire to bring
-            meaningful, high-quality digital experiences to life. From frontend
-            to backend, I’m here to make tech that lasts.
-          </p>
-          <p class="flex items-center gap-x-2">
-            <span>
-              <MapPinIcon />
-            </span>
-            Kalimantan Selatan, Indonesia
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
+  <main id="main"></main>
   <Footer />
 </Main>
