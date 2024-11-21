@@ -3,7 +3,11 @@ import { MoonIcon, SunIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
-export function ToggleThemeButton() {
+type Props = {
+  className?: string;
+};
+
+export function ToggleThemeButton(props: Props) {
   const [theme, setThemeState] = useState<"theme-light" | "dark" | "system">(
     "theme-light",
   );
@@ -30,11 +34,7 @@ export function ToggleThemeButton() {
   };
 
   return (
-    <Button
-      className="hidden lg:block"
-      variant="ghost"
-      onClick={() => toggleTheme()}
-    >
+    <Button variant="ghost" onClick={() => toggleTheme()}>
       {theme == "dark" ? <SunIcon /> : <MoonIcon />}
     </Button>
   );
