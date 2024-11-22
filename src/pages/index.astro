@@ -1,19 +1,12 @@
 ---
 import Main from "@/layouts/Main.astro";
-import Footer from "@/components/navigation/footer";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/navigation/navbar";
-import {
-  InstagramIcon,
-  TwitterIcon,
-  GithubIcon,
-  LinkedinIcon,
-} from "lucide-react";
 ---
 
 <Main title="Jalu Satriani Wijaya">
   <Navbar client:load />
-  <header class="py-32">
+  <header class="py-40">
     <div class="container">
       <div class="text-center">
         <h1 class="text-uppercase mb-0 text-6xl font-bold">
@@ -28,30 +21,12 @@ import {
         </p>
         <Button className="mt-8" size="lg">Reach Me</Button>
       </div>
-      <div class="mt-20 flex justify-end space-x-6">
-        <a
-          href="https://instagram.com/jalusw"
-          target="_blank"
-          title="instagram"
-        >
-          <InstagramIcon />
-        </a>
-        <a href="https://github.com/jalusw" target="_blank" title="github">
-          <GithubIcon />
-        </a>
-        <a href="https://x.com/jalusw" target="_blank" title="twitter">
-          <TwitterIcon />
-        </a>
-        <a
-          href="https://linkedin.com/in/jalusw"
-          target="_blank"
-          title="linkedin"
-        >
-          <LinkedinIcon />
-        </a>
-      </div>
     </div>
   </header>
   <main id="main"></main>
-  <Footer />
+  <footer>
+    <div class="container">
+      <p class="text-center">&copy; 2024 Jalu Satriani Wijaya</p>
+    </div>
+  </footer>
 </Main>
