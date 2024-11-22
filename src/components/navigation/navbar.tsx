@@ -21,6 +21,7 @@ export default function Navbar() {
             className="self-end lg:hidden"
             variant="ghost"
             onClick={toggleShowMenu}
+            title="Close Navigation Menu"
           >
             <XIcon />
           </Button>
@@ -35,11 +36,6 @@ export default function Navbar() {
                 Blog
               </a>
             </li>
-            <li>
-              <a className="lg:text-md text-xl" href="/works">
-                Works
-              </a>
-            </li>
           </ul>
         </div>
         <div className="flex space-x-4">
@@ -48,6 +44,7 @@ export default function Navbar() {
             className="lg:hidden"
             variant="ghost"
             onClick={toggleShowMenu}
+            title="Open Navigation Menu"
           >
             <MenuIcon />
           </Button>

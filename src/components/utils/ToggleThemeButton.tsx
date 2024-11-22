@@ -34,7 +34,7 @@ export function ToggleThemeButton(props: Props) {
   };
 
   return (
-    <Button variant="ghost" onClick={() => toggleTheme()}>
+    <Button variant="ghost" onClick={() => toggleTheme()} title="Toggle Theme">
       {theme == "dark" ? <SunIcon /> : <MoonIcon />}
     </Button>
   );
