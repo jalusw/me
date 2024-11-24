@@ -27,7 +27,14 @@ const { Content } = await post.render();
         <div class="py-8">
           <h1 class="mb-2 text-4xl font-bold">{post.data.title}</h1>
           <time class="" datetime={post.data.date.toISOString()}>
-            {post.data.date.toDateString()}
+            {
+              post.data.date.toLocaleDateString("en-US", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })
+            }
           </time>
         </div>
       </div>
@@ -40,5 +47,5 @@ const { Content } = await post.render();
       </div>
     </main>
   </div>
-  <Footer/>
+  <Footer />
 </Main>

@@ -19,10 +19,7 @@ const blogPosts = await getCollection("blog");
               slug: any;
               data: {
                 title: unknown;
-                date: {
-                  toISOString: () => string | null | undefined;
-                  toDateString: () => unknown;
-                };
+                date: Date;
                 description: unknown;
               };
             }) => (

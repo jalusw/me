@@ -1,13 +1,8 @@
-import * as React from "react";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
-type Props = {
-  className?: string;
-};
-
-export function ToggleThemeButton(props: Props) {
+export function ToggleThemeButton() {
   const [theme, setThemeState] = useState<"theme-light" | "dark" | "system">(
     "theme-light",
   );

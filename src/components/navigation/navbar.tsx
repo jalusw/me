@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "../ui/button";
-import { LanguagesIcon, MenuIcon, XIcon } from "lucide-react";
+import {  MenuIcon, XIcon } from "lucide-react";
 import { ToggleThemeButton } from "../utils/ToggleThemeButton";
 
 export default function Navbar() {
