@@ -10,8 +10,8 @@ export default function Navbar() {
 
   return (
     <nav className="border">
-      <div className="container flex max-w-screen-lg items-center justify-between py-6">
-        <a className="text-2xl font-bold" href="/">
+      <div className="container flex max-w-screen-lg items-center justify-between py-4">
+        <a className="text-xl font-bold" href="/">
           jalusw
         </a>
         <div
@@ -27,14 +27,17 @@ export default function Navbar() {
           </Button>
           <ul className="mt-8 flex w-full flex-col items-center justify-center gap-y-16 self-center lg:mt-0 lg:flex-row lg:gap-x-10 lg:gap-y-0">
             <li>
-              <a className="lg:text-md text-xl" href="/">
+              <a className="lg:text-md" href="/">
                 Home
               </a>
             </li>
             <li>
-              <a className="lg:text-md text-xl" href="/blog">
+              <a className="lg:text-md" href="/blog">
                 Blog
               </a>
+            </li>
+            <li>
+              <a className="lg:text-md" href="#">Project</a>
             </li>
           </ul>
         </div>

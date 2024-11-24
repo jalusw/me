@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Navbar from "@/components/navigation/navbar";
+import Footer from "@/components/navigation/footer";
 import Main from "@/layouts/Main.astro";
 
 export async function getStaticPaths() {
@@ -39,4 +40,5 @@ const { Content } = await post.render();
       </div>
     </main>
   </div>
+  <Footer/>
 </Main>

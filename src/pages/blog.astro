@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Main from "@/layouts/Main.astro";
 import Navbar from "@/components/navigation/navbar";
+import Footer from "@/components/navigation/footer";
 import { Card, CardTitle, CardContent, CardHeader } from "@/components/ui/card";
 
 const blogPosts = await getCollection("blog");
@@ -25,25 +26,33 @@ const blogPosts = await getCollection("blog");
                 description: unknown;
               };
             }) => (
-              <Card className="rounded-none shadow-none">
-                <CardHeader>
-                  <CardTitle>
-                    <a class="text-2xl" href={`/blog/${blog.slug}`}>
-                      {blog.data.title}
-                    </a>
-                  </CardTitle>
-                  <time datetime={blog.data.date.toISOString()}>
-                    {blog.data.date.toDateString()}
-                  </time>
-                </CardHeader>
-                <CardContent>
-                  <p>{blog.data.description}</p>
-                </CardContent>
+              <Card className="rounded-sm shadow-none">
+                <div class="prose dark:prose-invert">
+                  <CardHeader className="m-0">
+                    <CardTitle className="m-0">
+                      <a class="m-0 text-3xl" href={`/blog/${blog.slug}`}>
+                        {blog.data.title}
+                      </a>
+                    </CardTitle>
+                    <time datetime={blog.data.date.toISOString()}>
+                      {blog.data.date.toLocaleDateString("en-US", {
+                        weekday: "long",
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </time>
+                  </CardHeader>
+                  <CardContent className="mt-0">
+                    <p class="m-0">{blog.data.description}</p>
+                  </CardContent>
+                </div>
               </Card>
-            )
+            ),
           )
         }
       </section>
     </div>
   </main>
+  <Footer />
 </Main>

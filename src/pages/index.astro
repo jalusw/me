@@ -1,7 +1,7 @@
 ---
 import Main from "@/layouts/Main.astro";
-import { Button } from "@/components/ui/button";
 import Navbar from "@/components/navigation/navbar";
+import Footer from "@/components/navigation/footer";
 ---
 
 <Main title="Jalu Satriani Wijaya">
@@ -14,19 +14,48 @@ import Navbar from "@/components/navigation/navbar";
         </h1>
         <p class="mt-4 text-2xl">Software Engineer</p>
         <p class="mx-auto mt-4 max-w-[66ch] leading-loose">
-          Jalu is an Indonesian software engineer, proficient in Full Stack Web
-          Development, with over two years of experience in building full-stack
-          web and multi-platform applications. He is passionate about building
-          software solutions that genuinely help others.
+          Jalu is an Indonesian software engineer with 2+ years of experience in
+          full-stack web and multi-platform development, dedicated to creating
+          impactful software solutions.
         </p>
-        <Button className="mt-8" size="lg">Reach Me</Button>
       </div>
     </div>
   </header>
-  <main id="main"></main>
-  <footer>
-    <div class="container">
-      <p class="text-center">&copy; 2024 Jalu Satriani Wijaya</p>
-    </div>
-  </footer>
+  <main id="main">
+    <section class="py-36">
+      <div class="container max-w-screen-lg">
+        <h2 class="text-4xl font-bold">About Me</h2>
+        <p class="mt-4 leading-loose">
+          I am a software engineer based in Kalimantan Selatan, Indonesia, with
+          over two years of experience in the field. I specialize in full-stack
+          web development and am currently delving into Artificial Intelligence,
+          Cloud Computing, and advanced Full-Stack Development techniques. This
+          version is more polished and professional while maintaining clarity.
+          <a class="mt-2 underline" href="/jalusatrianiwijaya.pdf"
+            >Download my resume</a
+          >
+        </p>
+      </div>
+    </section>
+    <section class="py-36">
+      <div class="container max-w-screen-lg">
+        <h2 class="text-4xl font-bold">Experiences</h2>
+        <div class="mt-8 space-y-12">
+          <article>
+            <div class="prose dark:prose-invert">
+              <h3 class="m-0">Neumedira Indonesia</h3>
+              <p class="m-0">Front End Engineer</p>
+              <p>
+                As a Front End Engineer at Neumedira Indonesia, i spearheaded
+                the entire development process of front-end application and
+                developing cross-platform application using cutting edge front
+                end technologies.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
 </Main>
