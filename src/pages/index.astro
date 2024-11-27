@@ -2,6 +2,12 @@
 import Main from "@/layouts/Main.astro";
 import Navbar from "@/components/navigation/navbar";
 import Footer from "@/components/navigation/footer";
+import {
+  GithubIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TwitterIcon,
+} from "lucide-react";
 ---
 
 <Main
@@ -10,51 +16,83 @@ import Footer from "@/components/navigation/footer";
 >
   <Navbar client:load />
   <header class="py-40">
-    <div class="container">
-      <div class="text-center">
+    <div class="container max-w-screen-lg">
+      <div class="">
         <h1 class="text-uppercase mb-0 text-6xl font-bold">
           Jalu Satriani Wijaya
         </h1>
         <p class="mt-4 text-2xl">Software Engineer</p>
-        <p class="mx-auto mt-4 max-w-[66ch] leading-loose">
-          Jalu is an Indonesian software engineer with 2+ years of experience in
-          full-stack web and multi-platform development, dedicated to creating
-          impactful software solutions.
+        <p class="mt-4 max-w-[66ch] leading-loose">
+          A software engineer with 2+ years of experience in full-stack web and
+          multi-platform development, dedicated to create impactful software
+          solutions.
         </p>
       </div>
     </div>
   </header>
   <main id="main">
-    <section class="py-20">
+    <section class="py-28">
       <div class="container max-w-screen-lg">
-        <h2 class="text-4xl font-bold">About Me</h2>
-        <p class="mt-4 leading-loose">
-          I am a software engineer based in Kalimantan Selatan, Indonesia, with
-          over two years of experience in the field. I specialize in full-stack
-          web development and am currently delving into Artificial Intelligence,
-          Cloud Computing, and advanced Full-Stack Development techniques.
-          <a class="mt-2 underline" href="/jalusatrianiwijaya.pdf"
-            >Download my resume</a
-          >
-        </p>
+        <div class="prose dark:prose-invert">
+          <h2 class="text-4xl font-bold">Hi, There !</h2>
+          <p class="leading-loose">
+            I'm jalu satriani wijaya, a software engineer based in Indonesia. I
+            have a passion for software development and love to build things
+            that solve real-world problems using cutting edge technologies.
+          </p>
+        </div>
       </div>
     </section>
-    <section class="py-20">
+    <section class="py-28">
       <div class="container max-w-screen-lg">
-        <h2 class="text-4xl font-bold">Experiences</h2>
-        <div class="mt-8 space-y-12">
-          <article>
-            <div class="prose dark:prose-invert">
-              <h3 class="m-0">Neumedira Indonesia</h3>
-              <p class="m-0">Front End Engineer</p>
-              <p>
-                As a Front End Engineer at Neumedira Indonesia, i spearheaded
-                the entire development process of front-end application and
-                developing cross-platform application using cutting edge front
-                end technologies.
-              </p>
-            </div>
-          </article>
+        <div class="prose dark:prose-invert">
+          <h2 class="text-4xl font-bold">Reach Me</h2>
+          <p>
+            I'm always open to new opportunities and collaborations. If you have
+            a project in mind or just want to say hi, feel free to reach out to
+            me. ^^
+          </p>
+          <ul class="m-0 list-none p-0">
+            <li class="m-0 flex flex-col gap-x-8 gap-y-4 p-0 md:flex-row">
+              <a
+                class="flex items-center gap-x-2"
+                href="https://instagram.com/jalusw"
+                target="_blank"
+                rel="nofollow noopener"
+              >
+                <InstagramIcon />
+                <span> jalusw </span>
+              </a>
+              <a
+                class="flex items-center gap-x-2"
+                href="https://x.com/jalusw"
+                target="_blank"
+                rel="nofollow noopener"
+              >
+                <TwitterIcon />
+                <span> @jalusw </span>
+              </a>
+              <a
+                class="flex items-center gap-x-2"
+                href="https://github.com/jalusw"
+                target="_blank"
+                rel="nofollow noopener"
+              >
+                <GithubIcon />
+                <span> jalusw </span>
+              </a>
+
+              <a
+                class="flex items-center gap-x-2"
+                href="https://linkedin.com/in/jalusw"
+                target="_blank"
+                rel="nofollow noopener"
+              >
+                <LinkedinIcon />
+                <span> in/jalusw </span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

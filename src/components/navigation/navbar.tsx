@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "../ui/button";
-import {  MenuIcon, XIcon } from "lucide-react";
+import { MenuIcon, XIcon } from "lucide-react";
 import { ToggleThemeButton } from "../utils/ToggleThemeButton";
 
 export default function Navbar() {
@@ -33,11 +33,13 @@ export default function Navbar() {
             </li>
             <li>
               <a className="lg:text-md" href="/blog">
-                Blog
+                Blogs
               </a>
             </li>
             <li>
-              <a className="lg:text-md" href="#">Project</a>
+              <a className="lg:text-md" href="#">
+                Works
+              </a>
             </li>
           </ul>
         </div>
