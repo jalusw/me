@@ -9,13 +9,13 @@ export default function Navbar() {
   const toggleShowMenu = () => setShowMenu(!showMenu);
 
   return (
-    <nav className="border">
+    <nav className="sticky top-0 border backdrop-blur-xl">
       <div className="container flex max-w-screen-lg items-center justify-between py-4">
         <a className="text-xl font-bold" href="/">
           jalusw
         </a>
         <div
-          className={`fixed bottom-0 right-0 top-0 flex min-h-screen w-full flex-col bg-white p-4 transition-all dark:bg-neutral-950 lg:static lg:min-h-0 lg:flex-row lg:bg-transparent lg:p-0 ${showMenu ? "left-0" : "left-[-100%]"} lg:transition-none`}
+          className={`fixed bottom-0 right-0 top-0 flex min-h-screen w-full flex-col bg-white p-4 transition-all dark:bg-neutral-950 lg:static lg:min-h-0 lg:flex-row lg:bg-transparent lg:p-0 dark:lg:bg-inherit ${showMenu ? "left-0" : "left-[-100%]"} lg:transition-none`}
         >
           <Button
             className="self-end lg:hidden"
