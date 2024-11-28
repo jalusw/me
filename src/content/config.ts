@@ -1,15 +1,15 @@
 import { defineCollection, z } from "astro:content";
 
-export const blogSchema = z.object({
+export const writingSchema = z.object({
   title: z.string(),
   date: z.date(),
   description: z.string().max(200),
 });
 
-export type Blog = z.infer<typeof blogSchema>;
+export type Writing = z.infer<typeof writingSchema>;
 
 export const blogCollection = defineCollection({
-  schema: blogSchema,
+  schema: writingSchema,
 });
 
 export const collections = {
